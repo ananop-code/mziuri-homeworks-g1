@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ year["GEO_history"] }} {% endblock %}
+
+{% block content %}
+<div class="mt-4">
+    <a href="/" class="btn btn-outline-secondary mb-3">back to home</a>
+    <h1>details about {{ year["GEO_history"] }}</h1>
+    <hr>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <img src="/static/images/{{ year['img'] }}" class="img-fluid rounded-start" alt="history">
+                <div class="card-body">
+                    <h5 class="card-title">{{ year["GEO_history"] }}</h5>
+                    <p class="card-text">{{ year["name"] }}</p>
+                    <p class="card-text">{{ year["link"]}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
